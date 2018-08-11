@@ -4,6 +4,7 @@ import sys
 import datetime
 import os
 
+
 class  setParaFile():
 
     def getParameters(self, fileName, filter,separator=" ",position=1):

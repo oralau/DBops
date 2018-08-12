@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from ExecCommand import ExecCommand
+from execCommand import execCommand
 import os,time
 import sys
 import argparse
@@ -19,7 +19,7 @@ class refreshCommand():
                 # parser.add_argument('-i',type=int, default=1, help='internel')
                #  = parser.parse_args()
 
-                a = ExecCommand()
+                a = execCommand()
 
                 if(args.n==0):
 
@@ -66,7 +66,7 @@ class refreshCommand():
                 parser.add_argument('-i',type=int, default=1, help='internel')
                 args = parser.parse_args()
 
-                a = ExecCommand()
+                a = execCommand()
 
                 if(args.n==0):
 

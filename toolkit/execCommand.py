@@ -9,7 +9,7 @@ import logging
 
 
 
-class  ExecCommand(object):
+class  execCommand(object):
 
 
     def  execSysCommand(self ,cmd):

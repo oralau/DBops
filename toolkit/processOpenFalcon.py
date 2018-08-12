@@ -8,7 +8,7 @@ import logging
 
 class processOpenFalcon():
 
-    def sentToOpenFalcon(self,url,endpoint,metric,timestamp,step,value,counterType,tags=''):
+     def sentToOpenFalcon(self,url,endpoint,metric,timestamp,step,value,counterType,tags=''):
 
 
         for x in range(5):

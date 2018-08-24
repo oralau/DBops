@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/DBops52.iml" filepath="$PROJECT_DIR$/.idea/DBops52.iml" />
+      <module fileurl="file://D:\PycharmProjects\DBops56\.idea\DBops52.iml" filepath="D:\PycharmProjects\DBops56\.idea\DBops52.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DBops56.iml" filepath="$PROJECT_DIR$/.idea/DBops56.iml" />
     </modules>
   </component>
 </project>

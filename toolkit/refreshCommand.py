@@ -35,7 +35,7 @@ class refreshCommand():
 
                                         except KeyboardInterrupt, e:
 
-                                            sys.exit()
+                                            raise
 
 
                 else:
@@ -51,7 +51,7 @@ class refreshCommand():
 
                                 except KeyboardInterrupt, e:
 
-                                    sys.exit()
+                                    raise
 
 
 
@@ -80,7 +80,7 @@ class refreshCommand():
 
                                 except KeyboardInterrupt, e:
 
-                                    sys.exit()
+                                    raise
 
 
                 else:
@@ -97,7 +97,7 @@ class refreshCommand():
 
                                 except KeyboardInterrupt, e:
 
-                                    sys.exit()
+                                    raise
 
 
 

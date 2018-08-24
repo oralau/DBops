@@ -24,7 +24,7 @@ class   getFile():
 
         except IOError,e:
             logging.error(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ':'+str(e))
-            sys.exit()
+            raise
         finally:
             file.closed
 
@@ -38,11 +38,11 @@ class   getFile():
            # print  os.path.getsize(fileName) // (1024 *  1024)
             if os.path.getsize(fileName) // (1024 * 1024) >= 100:
                 logging.warning(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ':' + 'file over 200m')
-                sys.exit()
+                raise
 
         except os.error as oe:
             logging.error(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ':' + str(oe))
-            sys.exit()
+            raise
         try:
             #print os.path.getsize(fileName)/float(1024*1024)
             f = open(fileName,"r")
@@ -52,7 +52,7 @@ class   getFile():
 
         except IOError,e:
             logging.error(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ':'+str(e))
-            sys.exit()
+            raise
         finally:
             file.closed
 
@@ -64,11 +64,11 @@ class   getFile():
            # print  os.path.getsize(fileName) // (1024 *  1024)
             if os.path.getsize(fileName) // (1024 * 1024) >= 100:
                 logging.warning(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ':' + 'file over 200m')
-                sys.exit()
+                raise
 
         except os.error as  oe:
             logging.error(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ':' + str(oe))
-            sys.exit()
+            raise
 
         filterFile = []
         try:
@@ -80,7 +80,7 @@ class   getFile():
 
         except IOError,e:
             logging.error(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ':'+str(e))
-            sys.exit()
+            raise
         finally:
             file.closed
 
@@ -91,11 +91,11 @@ class   getFile():
                 # print  os.path.getsize(fileName) // (1024 *  1024)
                 if os.path.getsize(fileName) // (1024 * 1024) >= 100:
                     logging.warning(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ':' + 'file over 200m')
-                    sys.exit()
+                    raise
 
             except os.error as  oe:
                 logging.error(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ':' + str(oe))
-                sys.exit()
+                raise
 
             filterFile = []
             try:
@@ -107,7 +107,7 @@ class   getFile():
 
             except IOError,e:
                 logging.error(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ':'+str(e))
-                sys.exit()
+                raise
             finally:
                 file.closed
 

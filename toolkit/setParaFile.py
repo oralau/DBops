@@ -49,7 +49,7 @@ class  setParaFile():
 
         except IOError,e:
             logging.error(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ':'+str(e))
-            sys.exit()
+            raise
         finally:
             file.closed
 

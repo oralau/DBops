@@ -12,6 +12,7 @@ import logging
 class  execCommand(object):
 
 
+
     def  execSysCommand(self ,cmd):
 
         try:
@@ -23,7 +24,7 @@ class  execCommand(object):
             if sys.getsizeof(str(output)) // (1024 * 1024) >= 50:
                 logging.error('errorCode' + ':' + datetime.datetime.now().strftime
                 ("%Y-%m-%d %H:%M:%S") + ':' + 'sqlResult over 50m')
-                sys.exit()
+                raise
 
 
 
@@ -37,7 +38,7 @@ class  execCommand(object):
 
             logging.error('errorCode' + str(e.returncode) + ':' + datetime.datetime.now().strftime(
                 "%Y-%m-%d %H:%M:%S") + ':' + e.output)
-            sys.exit()
+            raise
 
 
 
@@ -61,7 +62,7 @@ class  execCommand(object):
 
 
 
-            if cmdResult[0].find('''[Warning]''') != -1:
+            if cmdResult[0].find('''Warning''') != -1:
                 del cmdResult[0]
 
             return cmdResult
@@ -82,7 +83,7 @@ class  execCommand(object):
 
         dbResult = self.execSysCommand(execSql)
 
-        if dbResult[0].find('''[Warning]''') != -1:
+        if dbResult[0].find('''Warning''') != -1:
             del dbResult[0]
 
         return dbResult
@@ -108,7 +109,7 @@ class  execCommand(object):
 
         else:
 
-            if sqlResult[0].find('''[Warning]''') != -1:
+            if sqlResult[0].find('''Warning''') != -1:
                 del sqlResult[0]
 
             columnName = []

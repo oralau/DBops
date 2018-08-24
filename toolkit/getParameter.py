@@ -15,7 +15,7 @@ class getParameter():
         except Exception as e:
 
            logging.error('errorCode' + str(e.returncode) + ':' + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ':' + e.output)
-           sys.exit()
+           raise
 
 
     def getIntParameter(self, paraFile, section, parameter):
@@ -30,7 +30,7 @@ class getParameter():
 
             logging.error(
                 'errorCode' + str(e.returncode) + ':' + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ':' + e.output)
-            sys.exit()
+            raise
 
 
 
@@ -45,7 +45,7 @@ class getParameter():
         except Exception as e:
 
             logging.error('errorCode' + str(e.returncode) + ':' + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ':' + e.output)
-            sys.exit()
+            raise
 
 
     def getBooleanParameter(self, paraFile, section, parameter):
@@ -59,7 +59,7 @@ class getParameter():
 
             logging.error('errorCode' + str(e.returncode) + ':' + datetime.datetime.now().strftime(
                "%Y-%m-%d %H:%M:%S") + ':' + e.output)
-            sys.exit()
+            raise
 
 
     def getListParameter(self, paraFile, section, parameter):
@@ -74,4 +74,4 @@ class getParameter():
 
             logging.error('errorCode' + str(e.returncode) + ':' + datetime.datetime.now().strftime(
                "%Y-%m-%d %H:%M:%S") + ':' + e.output)
-            sys.exit()
+            raise
